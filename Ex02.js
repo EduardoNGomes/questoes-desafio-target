@@ -16,6 +16,10 @@ const entry = readline.createInterface({
 const verifyIfIsIncludeOnFibonacci = numberToVerify => {
   let fibonacci = [1, 1]
 
+  if (numberToVerify == 0 || numberToVerify == 1) {
+    return true
+  }
+
   for (let i = 2; i <= numberToVerify; i++) {
     fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2])
   }
